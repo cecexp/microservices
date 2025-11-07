@@ -1,122 +1,68 @@
-# 🔐 Authentication Microservice🎉 Overview
+# 🔐 Authentication Microservice
 
+A lightweight JWT-based authentication microservice built with Node.js and Express.js.
 
+## 📋 Overview
 
-A lightweight JWT-based authentication microservice built with Node.js and Express.js.This is the initial production release of the [Micro-Service Name, e.g., Profile Management Service]. This service fulfills the core assignment requirements by providing dedicated API functionality and enforcing authentication via a mandatory token in the request header.
+This microservice provides JWT token generation, verification, and refresh functionality using API key authentication. Perfect for securing microservices architecture.
 
-
-
-## 📋 OverviewObjective,Status,Description
-
-Micro-Service Creation,✅ Complete,"Developed as a single, independent service using Node.js and Express.js.
-
-This microservice provides JWT token generation, verification, and refresh functionality using API key authentication. Perfect for securing microservices architecture.Authentication Integration,✅ Complete,Includes mandatory middleware to validate the presence of a Bearer token in the Authorization header before processing protected routes.
-
-Core Functionality,✅ Complete,"Implements [Specific Functionality, e.g., Profile creation and retrieval] endpoints."
-
-## 🛠️ Technical StackAPI Path Documentation,✅ Complete,All endpoints are documented below and in the accompanying Development Document.
-
-Repository Submission,✅ Complete,"Source code, dependencies, and documentation are included in this repository.
+## 🛠️ Technical Stack
 
 - **Language**: Node.js (JavaScript ES6+)
-
-- **Framework**: Express.js🛠️ Technical Stack
-
+- **Framework**: Express.js
 - **Authentication**: JWT (jsonwebtoken)
-
-- **Logging**: Morgan    Language: Node.js (JavaScript)
-
+- **Logging**: Morgan
 - **Environment**: dotenv
-
-    Framework: Express.js
 
 ## 🚀 Getting Started
 
-    Version Control: Git / GitHub
-
 ### Prerequisites
 
-
-
-- Node.js (v14 or higher)That's an excellent step for professional software development! A Release Note is key for documenting a project's completion and guiding users.
-
+- Node.js (v14 or higher)
 - npm or yarn
-
-Here is a template for your Release Documentation, suitable for inclusion in your GitHub repository, either as a standalone file (e.g., RELEASE_NOTES.md) or a section in your main README.md.
 
 ### Installation
 
-📝 Release Documentation: Micro-Service v1.0.0
-
 1. Clone the repository:
 
-```bash🎉 Overview
-
+```bash
 git clone https://github.com/cecexp/microservices.git
-
-cd microservicesThis is the initial production release of the [Micro-Service Name, e.g., Profile Management Service]. This service fulfills the core assignment requirements by providing dedicated API functionality and enforcing authentication via a mandatory token in the request header.
-
+cd microservices
 ```
-
-🎯 Key Features and Objectives Met
 
 2. Install dependencies:
 
-```bashObjective	Status	Description
-
-npm installMicro-Service Creation	✅ Complete	Developed as a single, independent service using Node.js and Express.js.
-
-```Authentication Integration	✅ Complete	Includes mandatory middleware to validate the presence of a Bearer token in the Authorization header before processing protected routes.
-
-Core Functionality	✅ Complete	Implements [Specific Functionality, e.g., Profile creation and retrieval] endpoints.
-
-3. Configure environment variables:API Path Documentation	✅ Complete	All endpoints are documented below and in the accompanying Development Document.
-
-```bashRepository Submission	✅ Complete	Source code, dependencies, and documentation are included in this repository.
-
-cp .env.example .env
-
-```🛠️ Technical Stack
-
-
-
-Edit `.env` with your configuration:    Language: Node.js (JavaScript)
-
-```env
-
-JWT_SECRET=your_super_strong_jwt_secret_key_change_this_in_production_32chars_min    Framework: Express.js
-
-PORT=4000
-
-API_KEYS={"serviceA":"your_key","serviceB":"your_key","serviceC":"your_key"}    Version Control: Git / GitHub
-
+```bash
+npm install
 ```
 
-🌐 API Endpoints (Paths Used)
+3. Configure environment variables:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your configuration:
+
+```env
+JWT_SECRET=your_super_strong_jwt_secret_key_change_this_in_production_32chars_min
+PORT=4000
+API_KEYS={"serviceA":"your_key","serviceB":"your_key","serviceC":"your_key"}
+```
 
 4. Start the server:
 
-The microservice runs on port 3000 (or as configured in index.js).
-
-**Development mode (with auto-reload):**Endpoint,Method,Security,Purpose
-
-```bash/health,GET,Public,Returns {status: 'healthy'} to confirm the service is running.
-
-npm run dev/api/v1/profile,POST,Protected,Creates or updates a user's profile data. Requires Authorization: Bearer <TOKEN>.
-
-```/api/v1/profile/:id,GET,Protected,Retrieves the profile data for a specific user ID. Requires Authorization: Bearer <TOKEN>.
-
-
-
-**Production mode:**⚠️ Known Limitations
+**Development mode (with auto-reload):**
 
 ```bash
-
-npm start    Token Validation: For assignment simplicity, the token is only checked for presence and the correct Bearer format. Full cryptographic validation (using JWT secret keys) is not implemented.
-
+npm run dev
 ```
 
-    Data Persistence: Data is stored in an in-memory object (userProfiles) and will be lost when the server is shut down.
+**Production mode:**
+
+```bash
+npm start
+```
 ## 🌐 API Endpoints
 
 Base URL: `http://localhost:4000/api`
