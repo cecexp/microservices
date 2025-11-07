@@ -264,30 +264,6 @@ Request logging is handled by Morgan in development mode. All requests are logge
 - Status code
 - Response time
 
-## ⚠️ Known Limitations
-
-- API keys are stored in environment variables (consider using a secrets manager for production)
-- No rate limiting implemented (recommended for production)
-- In-memory key validation (consider database for scalability)
-- No refresh token rotation strategy
-
-## 🚀 Deployment
-
-### Production Checklist
-
-- [ ] Generate strong JWT_SECRET (32+ characters)
-- [ ] Use secure API keys
-- [ ] Set NODE_ENV=production
-- [ ] Configure proper CORS origins
-- [ ] Implement rate limiting
-- [ ] Set up monitoring and logging
-- [ ] Use HTTPS in production
-- [ ] Consider Redis for token blacklisting
-
-## 📄 License
-
-ISC
-
 ## 👤 Author
 
 Ludim Rodriguez and Hector Ortiz
