@@ -52,7 +52,7 @@ router.post('/token/refresh', authenticateToken, (req, res) => {
 
     try {
         const newToken = refreshToken(oldToken);
-        res.json({ token: newToken });
+        res.json({ token: newToken, user: req.user });
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
